@@ -1,0 +1,7 @@
+add_test( [==[RunningStats mean/variance]==] /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests [==[RunningStats mean/variance]==]  )
+set_tests_properties( [==[RunningStats mean/variance]==] PROPERTIES WORKING_DIRECTORY /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build)
+add_test( [==[RunningStats matches naive on random data]==] /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests [==[RunningStats matches naive on random data]==]  )
+set_tests_properties( [==[RunningStats matches naive on random data]==] PROPERTIES WORKING_DIRECTORY /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build)
+add_test( [==[RunningStats merge equals push-all-at-once]==] /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests [==[RunningStats merge equals push-all-at-once]==]  )
+set_tests_properties( [==[RunningStats merge equals push-all-at-once]==] PROPERTIES WORKING_DIRECTORY /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build)
+set( fastnum_tests_TESTS [==[RunningStats mean/variance]==] [==[RunningStats matches naive on random data]==] [==[RunningStats merge equals push-all-at-once]==])

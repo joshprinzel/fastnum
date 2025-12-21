@@ -1,0 +1,5 @@
+RunningStats 0 1
+RunningStats mean/variance 1 0.0155402
+RunningStats matches naive on random data 1 0.0216219
+RunningStats merge equals push-all-at-once 1 0.0154103
+---

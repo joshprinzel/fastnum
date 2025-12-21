@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests-b12d07c_tests.cmake")
+  include("/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests-b12d07c_tests.cmake")
+else()
+  add_test(fastnum_tests_NOT_BUILT-b12d07c fastnum_tests_NOT_BUILT-b12d07c)
+endif()

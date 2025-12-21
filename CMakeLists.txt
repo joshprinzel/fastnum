@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.16)
 project(fastnum VERSION 0.1.0 LANGUAGES CXX)
 
 # ---------- Options ----------
@@ -38,13 +38,14 @@ if (FASTNUM_BUILD_TESTS)
   )
   FetchContent_MakeAvailable(Catch2)
 
-  add_executable(fastnum_tests
-    tests/test_running_stats.cpp
-  )
+  add_executable(fastnum_tests tests/test_running_stats.cpp)
   target_link_libraries(fastnum_tests PRIVATE fastnum::fastnum Catch2::Catch2WithMain)
 
-  add_test(NAME fastnum_tests COMMAND fastnum_tests)
+  list(APPEND CMAKE_MODULE_PATH "${catch2_SOURCE_DIR}/extras")
+  include(Catch)
+  catch_discover_tests(fastnum_tests)
 endif()
+
 
 # ---------- Examples ----------
 if (FASTNUM_BUILD_EXAMPLES)
