@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o  -o fastnum_tests  _deps/catch2-build/src/libCatch2Main.a _deps/catch2-build/src/libCatch2.a 
+/usr/bin/clang++     CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o  -o fastnum_tests  _deps/catch2-build/src/libCatch2Main.a _deps/catch2-build/src/libCatch2Main.a _deps/catch2-build/src/libCatch2.a 

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o"
   "CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o"
   "fastnum_tests"
   "fastnum_tests-b12d07c_tests.cmake"

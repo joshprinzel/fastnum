@@ -118,6 +118,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -564,6 +565,33 @@ examples/demo_running_stats.cpp.s:
 	$(MAKE) -f CMakeFiles/demo_running_stats.dir/build.make CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.s
 .PHONY : examples/demo_running_stats.cpp.s
 
+tests/test_online_standard_scaler.o: tests/test_online_standard_scaler.cpp.o
+
+.PHONY : tests/test_online_standard_scaler.o
+
+# target to build an object file
+tests/test_online_standard_scaler.cpp.o:
+	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o
+.PHONY : tests/test_online_standard_scaler.cpp.o
+
+tests/test_online_standard_scaler.i: tests/test_online_standard_scaler.cpp.i
+
+.PHONY : tests/test_online_standard_scaler.i
+
+# target to preprocess a source file
+tests/test_online_standard_scaler.cpp.i:
+	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.i
+.PHONY : tests/test_online_standard_scaler.cpp.i
+
+tests/test_online_standard_scaler.s: tests/test_online_standard_scaler.cpp.s
+
+.PHONY : tests/test_online_standard_scaler.s
+
+# target to generate assembly for a file
+tests/test_online_standard_scaler.cpp.s:
+	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.s
+.PHONY : tests/test_online_standard_scaler.cpp.s
+
 tests/test_running_stats.o: tests/test_running_stats.cpp.o
 
 .PHONY : tests/test_running_stats.o
@@ -635,6 +663,9 @@ help:
 	@echo "... examples/demo_running_stats.o"
 	@echo "... examples/demo_running_stats.i"
 	@echo "... examples/demo_running_stats.s"
+	@echo "... tests/test_online_standard_scaler.o"
+	@echo "... tests/test_online_standard_scaler.i"
+	@echo "... tests/test_online_standard_scaler.s"
 	@echo "... tests/test_running_stats.o"
 	@echo "... tests/test_running_stats.i"
 	@echo "... tests/test_running_stats.s"
@@ -649,6 +680,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

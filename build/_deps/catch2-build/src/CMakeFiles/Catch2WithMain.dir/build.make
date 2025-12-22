@@ -60,15 +60,15 @@ include _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/flags.make
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/flags.make
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o: _deps/catch2-src/src/catch2/internal/catch_main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o"
-	cd /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/internal/catch_main.cpp
+	cd /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/internal/catch_main.cpp
 
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.i"
-	cd /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/internal/catch_main.cpp > CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.i
+	cd /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/internal/catch_main.cpp > CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.i
 
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.s"
-	cd /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/internal/catch_main.cpp -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.s
+	cd /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/internal/catch_main.cpp -o CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.s
 
 # Object files for target Catch2WithMain
 Catch2WithMain_OBJECTS = \

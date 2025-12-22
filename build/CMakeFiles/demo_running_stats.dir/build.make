@@ -60,15 +60,15 @@ include CMakeFiles/demo_running_stats.dir/flags.make
 CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.o: CMakeFiles/demo_running_stats.dir/flags.make
 CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.o: ../examples/demo_running_stats.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/examples/demo_running_stats.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/examples/demo_running_stats.cpp
 
 CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/examples/demo_running_stats.cpp > CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/examples/demo_running_stats.cpp > CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.i
 
 CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/examples/demo_running_stats.cpp -o CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/examples/demo_running_stats.cpp -o CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.s
 
 # Object files for target demo_running_stats
 demo_running_stats_OBJECTS = \

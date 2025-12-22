@@ -1,5 +1,17 @@
-RunningStats 0 1
-RunningStats mean/variance 1 0.0155402
-RunningStats matches naive on random data 1 0.0216219
-RunningStats merge equals push-all-at-once 1 0.0154103
+OnlineStandardScaler readiness 1 0.0118751
+OnlineStandardScaler random interval readiness 1 0.0111827
+OnlineStandardScaler stream vs. batch equivalence 1 0.0744186
+OnlineStandardScaler transform_inplace matches transform 1 0.00965595
+OnlineStandardScaler not-ready policy returns NaN 1 0.00943358
+RunningStats mean/variance 1 0.0104024
+RunningStats matches naive on random data 1 0.0163209
+RunningStats merge equals push-all-at-once 1 0.0140113
+OnlineStandardScaler readiness 1 0.0109489
+OnlineStandardScaler random interval readiness 1 0.00994841
+OnlineStandardScaler stream vs. batch equivalence 1 0.010217
+OnlineStandardScaler transform_inplace matches transform 1 0.00928554
+OnlineStandardScaler not-ready policy returns NaN 1 0.010979
+RunningStats mean/variance 1 0.00903872
+RunningStats matches naive on random data 1 0.0133061
+RunningStats merge equals push-all-at-once 1 0.0136068
 ---

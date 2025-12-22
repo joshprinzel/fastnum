@@ -38,7 +38,17 @@ if (FASTNUM_BUILD_TESTS)
   )
   FetchContent_MakeAvailable(Catch2)
 
-  add_executable(fastnum_tests tests/test_running_stats.cpp)
+  file(GLOB TEST_SOURCES CONFIGURE_DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_*.cpp
+  )
+
+  add_executable(fastnum_tests ${TEST_SOURCES})
+  target_link_libraries(fastnum_tests PRIVATE fastnum::fastnum Catch2::Catch2WithMain)
+
+  list(APPEND CMAKE_MODULE_PATH "${catch2_SOURCE_DIR}/extras")
+  include(Catch)
+  catch_discover_tests(fastnum_tests)
+
   target_link_libraries(fastnum_tests PRIVATE fastnum::fastnum Catch2::Catch2WithMain)
 
   list(APPEND CMAKE_MODULE_PATH "${catch2_SOURCE_DIR}/extras")

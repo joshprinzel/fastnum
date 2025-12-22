@@ -111,7 +111,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/reporters/catch_reporter_teamcity.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o"
   "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/src/catch2/reporters/catch_reporter_xml.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
