@@ -111,19 +111,23 @@ public:
         c_ = T{0};
     }
 
-    // -- Correlation -----------------------------------------------------------
-    [[nodiscard]] T correaltion() const noexcept{
-        if(!ready()) return std::numeric_limits<T>::quiet_NaN();
+        // --- Correlation ---------------------------------------------------------
+
+    [[nodiscard]] T correlation() const noexcept {
+        if (!ready()) return std::numeric_limits<T>::quiet_NaN();
 
         const T vx = variance_x_population();
         const T vy = variance_y_population();
-        const T denom = std::sqrt(vx*vy);
-        if(denom <= eps_) return std::numeric_limits<T>::quiet_NaN();
+        const T denom = std::sqrt(vx * vy);
 
-        //Use population covariance for correlation; ratio is identical for sample/population
+        if (std::isnan(denom) || denom <= eps_) {
+            return std::numeric_limits<T>::quiet_NaN();
+        }
+
+        // Population vs sample cancels in correlation, so this is fine.
         return covariance_population() / denom;
-
     }
+
 
     constexpr void merge(const OnlineCovariance& other) noexcept{
         if(other.n_ == 0) return;

@@ -14,24 +14,50 @@ OnlineStandardScaler 0 0
 RunningStats 0 1
 RunningStats 0 0
 RunningStats 0 0
-OnlineStandardScaler readiness 1 0.0184185
-OnlineStandardScaler random interval readiness 1 0.0199863
-OnlineStandardScaler stream vs. batch equivalence 1 0.0147691
-OnlineStandardScaler transform_inplace matches transform 1 0.0149987
-OnlineStandardScaler not-ready policy returns NaN 1 0.0137635
-OnlineStandardScaler merge equals observe-all-at-once 1 0.0145201
-OnlineStandardScaler container observe overload works 1 0.0148362
-RunningStats mean/variance 1 0.0117368
-RunningStats matches naive on random data 1 0.0144559
-RunningStats merge equals push-all-at-once 1 0.0128075
-OnlineStandardScaler readiness 1 0.029478
-OnlineStandardScaler random interval readiness 1 0.0130231
-OnlineStandardScaler stream vs. batch equivalence 1 0.0128295
-OnlineStandardScaler transform_inplace matches transform 1 0.0114231
-OnlineStandardScaler not-ready policy returns NaN 1 0.0110726
-OnlineStandardScaler merge equals observe-all-at-once 1 0.0143098
-OnlineStandardScaler container observe overload works 1 0.0111889
-RunningStats mean/variance 1 0.0110268
-RunningStats matches naive on random data 1 0.0156602
-RunningStats merge equals push-all-at-once 1 0.0128633
+OnlineStandardScaler 0 1
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+RunningStats 0 1
+RunningStats 0 0
+RunningStats 0 0
+OnlineStandardScaler 0 1
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+OnlineStandardScaler 0 0
+RunningStats 0 1
+RunningStats 0 0
+RunningStats 0 0
+OnlineCovariance readiness and NaN policy 1 0.0158035
+OnlineCovariance matches naive reference on random data 1 0.0305279
+OnlineCovariance merge equals observe-all-at-once 1 0.0182669
+OnlineStandardScaler readiness 1 0.0155202
+OnlineStandardScaler random interval readiness 1 0.0143328
+OnlineStandardScaler stream vs. batch equivalence 1 0.0149217
+OnlineStandardScaler transform_inplace matches transform 1 0.0153176
+OnlineStandardScaler not-ready policy returns NaN 1 0.0158699
+OnlineStandardScaler merge equals observe-all-at-once 1 0.0145463
+OnlineStandardScaler container observe overload works 1 0.0145467
+RunningStats mean/variance 1 0.0215348
+RunningStats matches naive on random data 1 0.0171085
+RunningStats merge equals push-all-at-once 1 0.0158239
+OnlineCovariance readiness and NaN policy 1 0.0147611
+OnlineCovariance matches naive reference on random data 1 0.0275961
+OnlineCovariance merge equals observe-all-at-once 1 0.0224659
+OnlineStandardScaler readiness 1 0.0155863
+OnlineStandardScaler random interval readiness 1 0.0147377
+OnlineStandardScaler stream vs. batch equivalence 1 0.0150044
+OnlineStandardScaler transform_inplace matches transform 1 0.0159147
+OnlineStandardScaler not-ready policy returns NaN 1 0.0142376
+OnlineStandardScaler merge equals observe-all-at-once 1 0.0174253
+OnlineStandardScaler container observe overload works 1 0.0144883
+RunningStats mean/variance 1 0.0109447
+RunningStats matches naive on random data 1 0.0160265
+RunningStats merge equals push-all-at-once 1 0.0243193
 ---

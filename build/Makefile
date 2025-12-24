@@ -565,6 +565,33 @@ examples/demo_running_stats.cpp.s:
 	$(MAKE) -f CMakeFiles/demo_running_stats.dir/build.make CMakeFiles/demo_running_stats.dir/examples/demo_running_stats.cpp.s
 .PHONY : examples/demo_running_stats.cpp.s
 
+tests/test_online_covariance.o: tests/test_online_covariance.cpp.o
+
+.PHONY : tests/test_online_covariance.o
+
+# target to build an object file
+tests/test_online_covariance.cpp.o:
+	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o
+.PHONY : tests/test_online_covariance.cpp.o
+
+tests/test_online_covariance.i: tests/test_online_covariance.cpp.i
+
+.PHONY : tests/test_online_covariance.i
+
+# target to preprocess a source file
+tests/test_online_covariance.cpp.i:
+	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.i
+.PHONY : tests/test_online_covariance.cpp.i
+
+tests/test_online_covariance.s: tests/test_online_covariance.cpp.s
+
+.PHONY : tests/test_online_covariance.s
+
+# target to generate assembly for a file
+tests/test_online_covariance.cpp.s:
+	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.s
+.PHONY : tests/test_online_covariance.cpp.s
+
 tests/test_online_standard_scaler.o: tests/test_online_standard_scaler.cpp.o
 
 .PHONY : tests/test_online_standard_scaler.o
@@ -663,6 +690,9 @@ help:
 	@echo "... examples/demo_running_stats.o"
 	@echo "... examples/demo_running_stats.i"
 	@echo "... examples/demo_running_stats.s"
+	@echo "... tests/test_online_covariance.o"
+	@echo "... tests/test_online_covariance.i"
+	@echo "... tests/test_online_covariance.s"
 	@echo "... tests/test_online_standard_scaler.o"
 	@echo "... tests/test_online_standard_scaler.i"
 	@echo "... tests/test_online_standard_scaler.s"

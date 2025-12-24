@@ -57,9 +57,22 @@ include CMakeFiles/fastnum_tests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/fastnum_tests.dir/flags.make
 
+CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o: CMakeFiles/fastnum_tests.dir/flags.make
+CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o: ../tests/test_online_covariance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_covariance.cpp
+
+CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_covariance.cpp > CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.i
+
+CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_covariance.cpp -o CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.s
+
 CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o: CMakeFiles/fastnum_tests.dir/flags.make
 CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o: ../tests/test_online_standard_scaler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_standard_scaler.cpp
 
 CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.s: cmake_forc
 
 CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o: CMakeFiles/fastnum_tests.dir/flags.make
 CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o: ../tests/test_running_stats.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o -c /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_running_stats.cpp
 
 CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.i: cmake_force
@@ -85,12 +98,14 @@ CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.s: cmake_force
 
 # Object files for target fastnum_tests
 fastnum_tests_OBJECTS = \
+"CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o" \
 "CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o" \
 "CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o"
 
 # External object files for target fastnum_tests
 fastnum_tests_EXTERNAL_OBJECTS =
 
+fastnum_tests: CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o
 fastnum_tests: CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o
 fastnum_tests: CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o
 fastnum_tests: CMakeFiles/fastnum_tests.dir/build.make
@@ -98,7 +113,7 @@ fastnum_tests: _deps/catch2-build/src/libCatch2Main.a
 fastnum_tests: _deps/catch2-build/src/libCatch2Main.a
 fastnum_tests: _deps/catch2-build/src/libCatch2.a
 fastnum_tests: CMakeFiles/fastnum_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable fastnum_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable fastnum_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastnum_tests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=fastnum_tests -D TEST_EXECUTABLE=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=fastnum_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests-b12d07c_tests.cmake -P /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/extras/CatchAddTests.cmake
 	/usr/bin/cmake -D TEST_TARGET=fastnum_tests -D TEST_EXECUTABLE=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=fastnum_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests-b12d07c_tests.cmake -P /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/catch2-src/extras/CatchAddTests.cmake

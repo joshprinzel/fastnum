@@ -4,6 +4,7 @@
 # TEST_SOURCES at CMakeLists.txt:41 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_*.cpp")
 set(OLD_GLOB
+  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_covariance.cpp"
   "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_standard_scaler.cpp"
   "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_running_stats.cpp"
   )

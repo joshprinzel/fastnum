@@ -48,12 +48,6 @@ if (FASTNUM_BUILD_TESTS)
   list(APPEND CMAKE_MODULE_PATH "${catch2_SOURCE_DIR}/extras")
   include(Catch)
   catch_discover_tests(fastnum_tests)
-
-  target_link_libraries(fastnum_tests PRIVATE fastnum::fastnum Catch2::Catch2WithMain)
-
-  list(APPEND CMAKE_MODULE_PATH "${catch2_SOURCE_DIR}/extras")
-  include(Catch)
-  catch_discover_tests(fastnum_tests)
 endif()
 
 
