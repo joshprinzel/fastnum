@@ -10,7 +10,7 @@ namespace fastnum {
     template <typename T = double>
     class RunningStats {
     public:
-    constexpr void push(T x) noexcept {
+    constexpr void observe(T x) noexcept {
         ++n_;
         const T delta = x - mean_;
         mean_ += delta / static_cast<T>(n_);

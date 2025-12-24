@@ -1,74 +1,74 @@
-Start testing: Dec 21 20:23 EST
+Start testing: Dec 23 19:59 EST
 ----------------------------------------------------------
-1/16 Testing: OnlineStandardScaler readiness
-1/16 Test: OnlineStandardScaler readiness
+1/20 Testing: OnlineStandardScaler readiness
+1/20 Test: OnlineStandardScaler readiness
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler readiness"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler readiness" start time: Dec 21 20:23 EST
+"OnlineStandardScaler readiness" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "OnlineStandardScaler readiness"
-Randomness seeded to: 2417119350
+Randomness seeded to: 3331094255
 ===============================================================================
 All tests passed (4 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"OnlineStandardScaler readiness" end time: Dec 21 20:23 EST
+"OnlineStandardScaler readiness" end time: Dec 23 19:59 EST
 "OnlineStandardScaler readiness" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/16 Testing: OnlineStandardScaler random interval readiness
-2/16 Test: OnlineStandardScaler random interval readiness
+2/20 Testing: OnlineStandardScaler random interval readiness
+2/20 Test: OnlineStandardScaler random interval readiness
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler random interval readiness"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler random interval readiness" start time: Dec 21 20:23 EST
+"OnlineStandardScaler random interval readiness" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "OnlineStandardScaler random interval readiness"
-Randomness seeded to: 4218229482
+Randomness seeded to: 984856933
 ===============================================================================
 All tests passed (104 assertions in 1 test case)
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"OnlineStandardScaler random interval readiness" end time: Dec 21 20:23 EST
+"OnlineStandardScaler random interval readiness" end time: Dec 23 19:59 EST
 "OnlineStandardScaler random interval readiness" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/16 Testing: OnlineStandardScaler stream vs. batch equivalence
-3/16 Test: OnlineStandardScaler stream vs. batch equivalence
+3/20 Testing: OnlineStandardScaler stream vs. batch equivalence
+3/20 Test: OnlineStandardScaler stream vs. batch equivalence
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler stream vs. batch equivalence"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler stream vs. batch equivalence" start time: Dec 21 20:23 EST
+"OnlineStandardScaler stream vs. batch equivalence" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "OnlineStandardScaler stream vs. batch equivalence"
-Randomness seeded to: 2426706464
+Randomness seeded to: 2316373246
 ===============================================================================
 All tests passed (15 assertions in 1 test case)
 
 <end of output>
-Test time =   0.07 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OnlineStandardScaler stream vs. batch equivalence" end time: Dec 21 20:23 EST
+"OnlineStandardScaler stream vs. batch equivalence" end time: Dec 23 19:59 EST
 "OnlineStandardScaler stream vs. batch equivalence" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/16 Testing: OnlineStandardScaler transform_inplace matches transform
-4/16 Test: OnlineStandardScaler transform_inplace matches transform
+4/20 Testing: OnlineStandardScaler transform_inplace matches transform
+4/20 Test: OnlineStandardScaler transform_inplace matches transform
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler transform_inplace matches transform"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler transform_inplace matches transform" start time: Dec 21 20:23 EST
+"OnlineStandardScaler transform_inplace matches transform" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "OnlineStandardScaler transform_inplace matches transform"
-Randomness seeded to: 1621361656
+Randomness seeded to: 3077332302
 ===============================================================================
 All tests passed (257 assertions in 1 test case)
 
@@ -76,19 +76,19 @@ All tests passed (257 assertions in 1 test case)
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OnlineStandardScaler transform_inplace matches transform" end time: Dec 21 20:23 EST
+"OnlineStandardScaler transform_inplace matches transform" end time: Dec 23 19:59 EST
 "OnlineStandardScaler transform_inplace matches transform" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/16 Testing: OnlineStandardScaler not-ready policy returns NaN
-5/16 Test: OnlineStandardScaler not-ready policy returns NaN
+5/20 Testing: OnlineStandardScaler not-ready policy returns NaN
+5/20 Test: OnlineStandardScaler not-ready policy returns NaN
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler not-ready policy returns NaN"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler not-ready policy returns NaN" start time: Dec 21 20:23 EST
+"OnlineStandardScaler not-ready policy returns NaN" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "OnlineStandardScaler not-ready policy returns NaN"
-Randomness seeded to: 403051417
+Randomness seeded to: 3014382772
 ===============================================================================
 All tests passed (7 assertions in 1 test case)
 
@@ -96,19 +96,59 @@ All tests passed (7 assertions in 1 test case)
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OnlineStandardScaler not-ready policy returns NaN" end time: Dec 21 20:23 EST
+"OnlineStandardScaler not-ready policy returns NaN" end time: Dec 23 19:59 EST
 "OnlineStandardScaler not-ready policy returns NaN" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/16 Testing: RunningStats mean/variance
-6/16 Test: RunningStats mean/variance
+6/20 Testing: OnlineStandardScaler merge equals observe-all-at-once
+6/20 Test: OnlineStandardScaler merge equals observe-all-at-once
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler merge equals observe-all-at-once"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler merge equals observe-all-at-once" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler merge equals observe-all-at-once"
+Randomness seeded to: 884364485
+===============================================================================
+All tests passed (29 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler merge equals observe-all-at-once" end time: Dec 23 19:59 EST
+"OnlineStandardScaler merge equals observe-all-at-once" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/20 Testing: OnlineStandardScaler container observe overload works
+7/20 Test: OnlineStandardScaler container observe overload works
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler container observe overload works"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler container observe overload works" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler container observe overload works"
+Randomness seeded to: 2529168859
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler container observe overload works" end time: Dec 23 19:59 EST
+"OnlineStandardScaler container observe overload works" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/20 Testing: RunningStats mean/variance
+8/20 Test: RunningStats mean/variance
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats mean/variance"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"RunningStats mean/variance" start time: Dec 21 20:23 EST
+"RunningStats mean/variance" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "RunningStats mean/variance"
-Randomness seeded to: 2898779028
+Randomness seeded to: 1686087336
 ===============================================================================
 All tests passed (3 assertions in 1 test case)
 
@@ -116,19 +156,219 @@ All tests passed (3 assertions in 1 test case)
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"RunningStats mean/variance" end time: Dec 21 20:23 EST
+"RunningStats mean/variance" end time: Dec 23 19:59 EST
 "RunningStats mean/variance" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/16 Testing: RunningStats matches naive on random data
-7/16 Test: RunningStats matches naive on random data
+9/20 Testing: RunningStats matches naive on random data
+9/20 Test: RunningStats matches naive on random data
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats matches naive on random data"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"RunningStats matches naive on random data" start time: Dec 21 20:23 EST
+"RunningStats matches naive on random data" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "RunningStats matches naive on random data"
-Randomness seeded to: 4217432252
+Randomness seeded to: 4050549823
+===============================================================================
+All tests passed (600 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"RunningStats matches naive on random data" end time: Dec 23 19:59 EST
+"RunningStats matches naive on random data" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/20 Testing: RunningStats merge equals push-all-at-once
+10/20 Test: RunningStats merge equals push-all-at-once
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats merge equals push-all-at-once"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"RunningStats merge equals push-all-at-once" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "RunningStats merge equals push-all-at-once"
+Randomness seeded to: 2916958028
+===============================================================================
+All tests passed (600 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"RunningStats merge equals push-all-at-once" end time: Dec 23 19:59 EST
+"RunningStats merge equals push-all-at-once" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/20 Testing: OnlineStandardScaler readiness
+11/20 Test: OnlineStandardScaler readiness
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler readiness"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler readiness" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler readiness"
+Randomness seeded to: 1577303994
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler readiness" end time: Dec 23 19:59 EST
+"OnlineStandardScaler readiness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/20 Testing: OnlineStandardScaler random interval readiness
+12/20 Test: OnlineStandardScaler random interval readiness
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler random interval readiness"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler random interval readiness" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler random interval readiness"
+Randomness seeded to: 1808091824
+===============================================================================
+All tests passed (104 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler random interval readiness" end time: Dec 23 19:59 EST
+"OnlineStandardScaler random interval readiness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/20 Testing: OnlineStandardScaler stream vs. batch equivalence
+13/20 Test: OnlineStandardScaler stream vs. batch equivalence
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler stream vs. batch equivalence"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler stream vs. batch equivalence" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler stream vs. batch equivalence"
+Randomness seeded to: 2411790748
+===============================================================================
+All tests passed (15 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler stream vs. batch equivalence" end time: Dec 23 19:59 EST
+"OnlineStandardScaler stream vs. batch equivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/20 Testing: OnlineStandardScaler transform_inplace matches transform
+14/20 Test: OnlineStandardScaler transform_inplace matches transform
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler transform_inplace matches transform"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler transform_inplace matches transform" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler transform_inplace matches transform"
+Randomness seeded to: 4031680777
+===============================================================================
+All tests passed (257 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler transform_inplace matches transform" end time: Dec 23 19:59 EST
+"OnlineStandardScaler transform_inplace matches transform" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/20 Testing: OnlineStandardScaler not-ready policy returns NaN
+15/20 Test: OnlineStandardScaler not-ready policy returns NaN
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler not-ready policy returns NaN"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler not-ready policy returns NaN" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler not-ready policy returns NaN"
+Randomness seeded to: 1452197575
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler not-ready policy returns NaN" end time: Dec 23 19:59 EST
+"OnlineStandardScaler not-ready policy returns NaN" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/20 Testing: OnlineStandardScaler merge equals observe-all-at-once
+16/20 Test: OnlineStandardScaler merge equals observe-all-at-once
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler merge equals observe-all-at-once"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler merge equals observe-all-at-once" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler merge equals observe-all-at-once"
+Randomness seeded to: 992582885
+===============================================================================
+All tests passed (29 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler merge equals observe-all-at-once" end time: Dec 23 19:59 EST
+"OnlineStandardScaler merge equals observe-all-at-once" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/20 Testing: OnlineStandardScaler container observe overload works
+17/20 Test: OnlineStandardScaler container observe overload works
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler container observe overload works"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"OnlineStandardScaler container observe overload works" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "OnlineStandardScaler container observe overload works"
+Randomness seeded to: 2898061592
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OnlineStandardScaler container observe overload works" end time: Dec 23 19:59 EST
+"OnlineStandardScaler container observe overload works" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/20 Testing: RunningStats mean/variance
+18/20 Test: RunningStats mean/variance
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats mean/variance"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"RunningStats mean/variance" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "RunningStats mean/variance"
+Randomness seeded to: 614083703
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"RunningStats mean/variance" end time: Dec 23 19:59 EST
+"RunningStats mean/variance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/20 Testing: RunningStats matches naive on random data
+19/20 Test: RunningStats matches naive on random data
+Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats matches naive on random data"
+Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
+"RunningStats matches naive on random data" start time: Dec 23 19:59 EST
+Output:
+----------------------------------------------------------
+Filters: "RunningStats matches naive on random data"
+Randomness seeded to: 1158004029
 ===============================================================================
 All tests passed (600 assertions in 1 test case)
 
@@ -136,19 +376,19 @@ All tests passed (600 assertions in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"RunningStats matches naive on random data" end time: Dec 21 20:23 EST
+"RunningStats matches naive on random data" end time: Dec 23 19:59 EST
 "RunningStats matches naive on random data" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/16 Testing: RunningStats merge equals push-all-at-once
-8/16 Test: RunningStats merge equals push-all-at-once
+20/20 Testing: RunningStats merge equals push-all-at-once
+20/20 Test: RunningStats merge equals push-all-at-once
 Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats merge equals push-all-at-once"
 Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"RunningStats merge equals push-all-at-once" start time: Dec 21 20:23 EST
+"RunningStats merge equals push-all-at-once" start time: Dec 23 19:59 EST
 Output:
 ----------------------------------------------------------
 Filters: "RunningStats merge equals push-all-at-once"
-Randomness seeded to: 779333335
+Randomness seeded to: 3355690854
 ===============================================================================
 All tests passed (600 assertions in 1 test case)
 
@@ -156,168 +396,8 @@ All tests passed (600 assertions in 1 test case)
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"RunningStats merge equals push-all-at-once" end time: Dec 21 20:23 EST
+"RunningStats merge equals push-all-at-once" end time: Dec 23 19:59 EST
 "RunningStats merge equals push-all-at-once" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/16 Testing: OnlineStandardScaler readiness
-9/16 Test: OnlineStandardScaler readiness
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler readiness"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler readiness" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "OnlineStandardScaler readiness"
-Randomness seeded to: 2071199685
-===============================================================================
-All tests passed (4 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"OnlineStandardScaler readiness" end time: Dec 21 20:23 EST
-"OnlineStandardScaler readiness" time elapsed: 00:00:00
-----------------------------------------------------------
-
-10/16 Testing: OnlineStandardScaler random interval readiness
-10/16 Test: OnlineStandardScaler random interval readiness
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler random interval readiness"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler random interval readiness" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "OnlineStandardScaler random interval readiness"
-Randomness seeded to: 3012461040
-===============================================================================
-All tests passed (104 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"OnlineStandardScaler random interval readiness" end time: Dec 21 20:23 EST
-"OnlineStandardScaler random interval readiness" time elapsed: 00:00:00
-----------------------------------------------------------
-
-11/16 Testing: OnlineStandardScaler stream vs. batch equivalence
-11/16 Test: OnlineStandardScaler stream vs. batch equivalence
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler stream vs. batch equivalence"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler stream vs. batch equivalence" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "OnlineStandardScaler stream vs. batch equivalence"
-Randomness seeded to: 3262308556
-===============================================================================
-All tests passed (15 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"OnlineStandardScaler stream vs. batch equivalence" end time: Dec 21 20:23 EST
-"OnlineStandardScaler stream vs. batch equivalence" time elapsed: 00:00:00
-----------------------------------------------------------
-
-12/16 Testing: OnlineStandardScaler transform_inplace matches transform
-12/16 Test: OnlineStandardScaler transform_inplace matches transform
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler transform_inplace matches transform"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler transform_inplace matches transform" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "OnlineStandardScaler transform_inplace matches transform"
-Randomness seeded to: 3950500630
-===============================================================================
-All tests passed (257 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"OnlineStandardScaler transform_inplace matches transform" end time: Dec 21 20:23 EST
-"OnlineStandardScaler transform_inplace matches transform" time elapsed: 00:00:00
-----------------------------------------------------------
-
-13/16 Testing: OnlineStandardScaler not-ready policy returns NaN
-13/16 Test: OnlineStandardScaler not-ready policy returns NaN
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "OnlineStandardScaler not-ready policy returns NaN"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"OnlineStandardScaler not-ready policy returns NaN" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "OnlineStandardScaler not-ready policy returns NaN"
-Randomness seeded to: 4233788568
-===============================================================================
-All tests passed (7 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"OnlineStandardScaler not-ready policy returns NaN" end time: Dec 21 20:23 EST
-"OnlineStandardScaler not-ready policy returns NaN" time elapsed: 00:00:00
-----------------------------------------------------------
-
-14/16 Testing: RunningStats mean/variance
-14/16 Test: RunningStats mean/variance
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats mean/variance"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"RunningStats mean/variance" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "RunningStats mean/variance"
-Randomness seeded to: 2661461640
-===============================================================================
-All tests passed (3 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"RunningStats mean/variance" end time: Dec 21 20:23 EST
-"RunningStats mean/variance" time elapsed: 00:00:00
-----------------------------------------------------------
-
-15/16 Testing: RunningStats matches naive on random data
-15/16 Test: RunningStats matches naive on random data
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats matches naive on random data"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"RunningStats matches naive on random data" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "RunningStats matches naive on random data"
-Randomness seeded to: 3622074733
-===============================================================================
-All tests passed (600 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"RunningStats matches naive on random data" end time: Dec 21 20:23 EST
-"RunningStats matches naive on random data" time elapsed: 00:00:00
-----------------------------------------------------------
-
-16/16 Testing: RunningStats merge equals push-all-at-once
-16/16 Test: RunningStats merge equals push-all-at-once
-Command: "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/fastnum_tests" "RunningStats merge equals push-all-at-once"
-Directory: /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build
-"RunningStats merge equals push-all-at-once" start time: Dec 21 20:23 EST
-Output:
-----------------------------------------------------------
-Filters: "RunningStats merge equals push-all-at-once"
-Randomness seeded to: 2446780724
-===============================================================================
-All tests passed (600 assertions in 1 test case)
-
-<end of output>
-Test time =   0.01 sec
-----------------------------------------------------------
-Test Passed.
-"RunningStats merge equals push-all-at-once" end time: Dec 21 20:23 EST
-"RunningStats merge equals push-all-at-once" time elapsed: 00:00:00
-----------------------------------------------------------
-
-End testing: Dec 21 20:23 EST
+End testing: Dec 23 19:59 EST

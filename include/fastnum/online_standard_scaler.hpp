@@ -27,7 +27,7 @@ namespace fastnum {
  * ## Requirements / Assumptions
  * - `T` must be a floating-point type (`float`, `double`, `long double`).
  * - The underlying `fastnum::RunningStats<T>` must provide:
- *   - `push(T)`
+ *   - `observe(T)`
  *   - `count() -> std::size_t`
  *   - `mean() -> T`
  *   - `variance_population() -> T`
@@ -75,7 +75,7 @@ public:
      * @param x Sample value.
      */
     constexpr void observe(T x) noexcept {
-        stats_.push(x);
+        stats_.observe(x);
     }
 
     /**
@@ -89,7 +89,7 @@ public:
     constexpr void observe(const T* xs, std::size_t n) noexcept {
         if (!xs || n == 0) return;
         for (std::size_t i = 0; i < n; ++i) {
-            stats_.push(xs[i]);
+            stats_.observe(xs[i]);
         }
     }
 

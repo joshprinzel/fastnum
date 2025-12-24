@@ -26,11 +26,11 @@ static double naive_sample_var(const std::vector<double>& xs){
 
 TEST_CASE("RunningStats mean/variance", "[runningstats]") {
   fastnum::RunningStats<double> rs;
-  rs.push(1);
-  rs.push(2);
-  rs.push(3);
-  rs.push(4);
-  rs.push(5);
+  rs.observe(1);
+  rs.observe(2);
+  rs.observe(3);
+  rs.observe(4);
+  rs.observe(5);
 
   REQUIRE(rs.count() == 5);
   REQUIRE(rs.mean() == Catch::Approx(3.0));
@@ -49,7 +49,7 @@ TEST_CASE("RunningStats matches naive on random data", "[runningstats]"){
         for(int i = 0; i < n; ++i) xs.push_back(dist(rng));
 
         fastnum::RunningStats<double> rs;
-        for(double x: xs) rs.push(x);
+        for(double x: xs) rs.observe(x);
 
         //Are they equal in size?
         REQUIRE(rs.count() == xs.size());
@@ -76,13 +76,13 @@ TEST_CASE("RunningStats merge equals push-all-at-once", "[runningstats][merge]")
 
     // push-all-at-once
     fastnum::RunningStats<double> all;
-    for (double x : xs) all.push(x);
+    for (double x : xs) all.observe(x);
 
     // split + merge
     const int split = n / 2;
     fastnum::RunningStats<double> a, b;
-    for (int i = 0; i < split; ++i) a.push(xs[i]);
-    for (int i = split; i < n; ++i) b.push(xs[i]);
+    for (int i = 0; i < split; ++i) a.observe(xs[i]);
+    for (int i = split; i < n; ++i) b.observe(xs[i]);
     a.merge(b);
 
     REQUIRE(a.count() == all.count());

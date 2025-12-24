@@ -111,7 +111,58 @@ public:
         c_ = T{0};
     }
 
-    // TODO: correlation() and merge()
+    // -- Correlation -----------------------------------------------------------
+    [[nodiscard]] T correaltion() const noexcept{
+        if(!ready()) return std::numeric_limits<T>::quiet_NaN();
+
+        const T vx = variance_x_population();
+        const T vy = variance_y_population();
+        const T denom = std::sqrt(vx*vy);
+        if(denom <= eps_) return std::numeric_limits<T>::quiet_NaN();
+
+        //Use population covariance for correlation; ratio is identical for sample/population
+        return covariance_population() / denom;
+
+    }
+
+    constexpr void merge(const OnlineCovariance& other) noexcept{
+        if(other.n_ == 0) return;
+        if(n_ == 0){
+            *this = other;
+            return;
+        }
+
+        const std::size_t n_a = n_;
+        const std::size_t n_b = other.n_;
+        const std::size_t n = n_a + n_b;
+
+        const T mean_x_a = mean_x_;
+        const T mean_y_a = mean_y_;
+
+        const T mean_x_b = other.mean_x_;
+        const T mean_y_b = other.mean_y_;
+
+        const T dx = mean_x_b - mean_x_a;
+        const T dy = mean_y_b - mean_y_a;
+
+        const T n_a_t = static_cast<T>(n_a);
+        const T n_b_t = static_cast<T>(n_b);
+        const T n_t = static_cast<T>(n);
+
+        //Update means
+        mean_x_ = mean_x_a + dx * (n_b_t / n_t);
+        mean_y_ = mean_y_a + dy * (n_b_t / n_t);
+
+
+        //Combine second central moments (Welford Merge)
+        m2_x_ = m2_x_ + other.m2_x_ + dx * dx * (n_a_t * n_b_t / n_t);
+        m2_y_ = m2_y_ + other.m2_y_ + dy * dy * (n_a_t * n_b_t / n_t);
+
+        //Combine cross_deviation sum
+        c_ = c_ + other.c_ + dx * dy * (n_a_t * n_b_t / n_t);
+
+        n_ = n;
+    }
 
 private:
     std::size_t n_{0};

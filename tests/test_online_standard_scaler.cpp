@@ -135,3 +135,42 @@ TEST_CASE("OnlineStandardScaler not-ready policy returns NaN") {
         REQUIRE(std::isnan(v));
     }
 }
+
+
+TEST_CASE("OnlineStandardScaler merge equals observe-all-at-once", "[scaler][merge]"){
+    constexpr std::size_t N = 2000;
+
+    std::mt19937 rng(777);
+    std::normal_distribution<double> dist(0.0, 4.0);
+
+    std::vector<double> data(N);
+    std::generate(data.begin(), data.end(), [&](){return dist(rng); });
+
+    //all-at-once
+    fastnum::OnlineStandardScaler<double> all;
+    all.observe(data.data(),data.size());
+    REQUIRE(all.ready());
+
+    // Split + merge
+    fastnum::OnlineStandardScaler<double> a, b;
+    const std::size_t mid = N/2;
+    a.observe(data.data(),mid);
+    b.observe(data.data() + mid, N - mid);
+    a.merge(b);
+
+    REQUIRE(a.count() == all.count());
+    REQUIRE(a.ready() == all.ready());
+    REQUIRE(a.mean() == Catch::Approx(all.mean()).margin(1e-12));
+
+
+    for(std::size_t i = 0; i < 25; ++i){
+        REQUIRE(a.transform(data[i]) == Catch::Approx(all.transform(data[i])).margin(1e-12));
+    }
+}
+
+TEST_CASE("OnlineStandardScaler container observe overload works"){
+    std::vector<double> data{1.0,2.0,3.0,4.0};
+    fastnum::OnlineStandardScaler<double> scaler;
+    scaler.observe(data);
+    REQUIRE(scaler.count() == data.size());
+}
