@@ -4,6 +4,7 @@ project(fastnum VERSION 0.1.0 LANGUAGES CXX)
 # ---------- Options ----------
 option(FASTNUM_BUILD_TESTS "Build fastnum tests" ON)
 option(FASTNUM_BUILD_EXAMPLES "Build fastnum examples" ON)
+option(FASTNUM_BUILD_BENCHMARKS "Build fastnum benchmarks" ON)
 
 # ---------- Library ----------
 add_library(fastnum INTERFACE)
@@ -49,6 +50,39 @@ if (FASTNUM_BUILD_TESTS)
   include(Catch)
   catch_discover_tests(fastnum_tests)
 endif()
+
+# ---------- Benchmarks ----------
+if (FASTNUM_BUILD_BENCHMARKS)
+  include(FetchContent)
+
+  FetchContent_Declare(
+    benchmark
+    GIT_REPOSITORY https://github.com/google/benchmark.git
+    GIT_TAG v1.8.3
+  )
+
+  # Disable benchmark's own tests
+  set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
+
+  FetchContent_MakeAvailable(benchmark)
+
+  file(GLOB BENCH_SOURCES CONFIGURE_DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/benchmarks/bench_*.cpp
+  )
+
+  add_executable(fastnum_bench ${BENCH_SOURCES})
+
+  target_link_libraries(fastnum_bench
+    PRIVATE
+      fastnum::fastnum
+      benchmark::benchmark
+  )
+
+  target_compile_options(fastnum_bench PRIVATE
+    -O3 -DNDEBUG -fno-omit-frame-pointer
+  )
+endif()
+
 
 
 # ---------- Examples ----------

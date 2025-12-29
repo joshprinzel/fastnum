@@ -56,6 +56,40 @@ CMAKE_BINARY_DIR = /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/buil
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,6 +122,18 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -331,6 +377,19 @@ ExperimentalCoverage/fast:
 .PHONY : ExperimentalCoverage/fast
 
 #=============================================================================
+# Target rules for targets named fastnum_bench
+
+# Build rule for target.
+fastnum_bench: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fastnum_bench
+.PHONY : fastnum_bench
+
+# fast build rule for target.
+fastnum_bench/fast:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/build
+.PHONY : fastnum_bench/fast
+
+#=============================================================================
 # Target rules for targets named NightlyCoverage
 
 # Build rule for target.
@@ -538,6 +597,86 @@ Catch2/fast:
 	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/build
 .PHONY : Catch2/fast
 
+#=============================================================================
+# Target rules for targets named benchmark_main
+
+# Build rule for target.
+benchmark_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 benchmark_main
+.PHONY : benchmark_main
+
+# fast build rule for target.
+benchmark_main/fast:
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/build
+.PHONY : benchmark_main/fast
+
+#=============================================================================
+# Target rules for targets named benchmark
+
+# Build rule for target.
+benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 benchmark
+.PHONY : benchmark
+
+# fast build rule for target.
+benchmark/fast:
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark.dir/build
+.PHONY : benchmark/fast
+
+benchmarks/bench_online_covariance.o: benchmarks/bench_online_covariance.cpp.o
+
+.PHONY : benchmarks/bench_online_covariance.o
+
+# target to build an object file
+benchmarks/bench_online_covariance.cpp.o:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o
+.PHONY : benchmarks/bench_online_covariance.cpp.o
+
+benchmarks/bench_online_covariance.i: benchmarks/bench_online_covariance.cpp.i
+
+.PHONY : benchmarks/bench_online_covariance.i
+
+# target to preprocess a source file
+benchmarks/bench_online_covariance.cpp.i:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.i
+.PHONY : benchmarks/bench_online_covariance.cpp.i
+
+benchmarks/bench_online_covariance.s: benchmarks/bench_online_covariance.cpp.s
+
+.PHONY : benchmarks/bench_online_covariance.s
+
+# target to generate assembly for a file
+benchmarks/bench_online_covariance.cpp.s:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.s
+.PHONY : benchmarks/bench_online_covariance.cpp.s
+
+benchmarks/bench_smoke.o: benchmarks/bench_smoke.cpp.o
+
+.PHONY : benchmarks/bench_smoke.o
+
+# target to build an object file
+benchmarks/bench_smoke.cpp.o:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o
+.PHONY : benchmarks/bench_smoke.cpp.o
+
+benchmarks/bench_smoke.i: benchmarks/bench_smoke.cpp.i
+
+.PHONY : benchmarks/bench_smoke.i
+
+# target to preprocess a source file
+benchmarks/bench_smoke.cpp.i:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.i
+.PHONY : benchmarks/bench_smoke.cpp.i
+
+benchmarks/bench_smoke.s: benchmarks/bench_smoke.cpp.s
+
+.PHONY : benchmarks/bench_smoke.s
+
+# target to generate assembly for a file
+benchmarks/bench_smoke.cpp.s:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.s
+.PHONY : benchmarks/bench_smoke.cpp.s
+
 examples/demo_running_stats.o: examples/demo_running_stats.cpp.o
 
 .PHONY : examples/demo_running_stats.o
@@ -652,6 +791,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
@@ -669,8 +811,10 @@ help:
 	@echo "... ContinuousCoverage"
 	@echo "... ExperimentalConfigure"
 	@echo "... Continuous"
+	@echo "... install"
 	@echo "... NightlyStart"
 	@echo "... ExperimentalCoverage"
+	@echo "... fastnum_bench"
 	@echo "... NightlyCoverage"
 	@echo "... NightlySubmit"
 	@echo "... Nightly"
@@ -687,6 +831,14 @@ help:
 	@echo "... ContinuousSubmit"
 	@echo "... Catch2WithMain"
 	@echo "... Catch2"
+	@echo "... benchmark_main"
+	@echo "... benchmark"
+	@echo "... benchmarks/bench_online_covariance.o"
+	@echo "... benchmarks/bench_online_covariance.i"
+	@echo "... benchmarks/bench_online_covariance.s"
+	@echo "... benchmarks/bench_smoke.o"
+	@echo "... benchmarks/bench_smoke.i"
+	@echo "... benchmarks/bench_smoke.s"
 	@echo "... examples/demo_running_stats.o"
 	@echo "... examples/demo_running_stats.i"
 	@echo "... examples/demo_running_stats.s"

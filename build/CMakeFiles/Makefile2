@@ -54,13 +54,16 @@ CMAKE_BINARY_DIR = /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/buil
 
 # The main recursive "all" target.
 all: CMakeFiles/demo_running_stats.dir/all
+all: CMakeFiles/fastnum_bench.dir/all
 all: CMakeFiles/fastnum_tests.dir/all
 all: _deps/catch2-build/all
+all: _deps/benchmark-build/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: _deps/catch2-build/preinstall
+preinstall: _deps/benchmark-build/preinstall
 
 .PHONY : preinstall
 
@@ -81,6 +84,7 @@ clean: CMakeFiles/ExperimentalConfigure.dir/clean
 clean: CMakeFiles/Continuous.dir/clean
 clean: CMakeFiles/NightlyStart.dir/clean
 clean: CMakeFiles/ExperimentalCoverage.dir/clean
+clean: CMakeFiles/fastnum_bench.dir/clean
 clean: CMakeFiles/NightlyCoverage.dir/clean
 clean: CMakeFiles/NightlySubmit.dir/clean
 clean: CMakeFiles/Nightly.dir/clean
@@ -96,8 +100,47 @@ clean: CMakeFiles/ExperimentalBuild.dir/clean
 clean: CMakeFiles/ContinuousTest.dir/clean
 clean: CMakeFiles/ContinuousSubmit.dir/clean
 clean: _deps/catch2-build/clean
+clean: _deps/benchmark-build/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory _deps/benchmark-build
+
+# Recursive "all" directory target.
+_deps/benchmark-build/all: _deps/benchmark-build/src/all
+
+.PHONY : _deps/benchmark-build/all
+
+# Recursive "preinstall" directory target.
+_deps/benchmark-build/preinstall: _deps/benchmark-build/src/preinstall
+
+.PHONY : _deps/benchmark-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/benchmark-build/clean: _deps/benchmark-build/src/clean
+
+.PHONY : _deps/benchmark-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/benchmark-build/src
+
+# Recursive "all" directory target.
+_deps/benchmark-build/src/all: _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/all
+_deps/benchmark-build/src/all: _deps/benchmark-build/src/CMakeFiles/benchmark.dir/all
+
+.PHONY : _deps/benchmark-build/src/all
+
+# Recursive "preinstall" directory target.
+_deps/benchmark-build/src/preinstall:
+
+.PHONY : _deps/benchmark-build/src/preinstall
+
+# Recursive "clean" directory target.
+_deps/benchmark-build/src/clean: _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/clean
+_deps/benchmark-build/src/clean: _deps/benchmark-build/src/CMakeFiles/benchmark.dir/clean
+
+.PHONY : _deps/benchmark-build/src/clean
 
 #=============================================================================
 # Directory level rules for directory _deps/catch2-build
@@ -171,7 +214,7 @@ CMakeFiles/NightlyMemCheck.dir/clean:
 CMakeFiles/demo_running_stats.dir/all:
 	$(MAKE) -f CMakeFiles/demo_running_stats.dir/build.make CMakeFiles/demo_running_stats.dir/depend
 	$(MAKE) -f CMakeFiles/demo_running_stats.dir/build.make CMakeFiles/demo_running_stats.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=95,96 "Built target demo_running_stats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=94,95 "Built target demo_running_stats"
 .PHONY : CMakeFiles/demo_running_stats.dir/all
 
 # Build rule for subdir invocation for target.
@@ -570,6 +613,33 @@ CMakeFiles/ExperimentalCoverage.dir/clean:
 .PHONY : CMakeFiles/ExperimentalCoverage.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/fastnum_bench.dir
+
+# All Build rule for target.
+CMakeFiles/fastnum_bench.dir/all: _deps/benchmark-build/src/CMakeFiles/benchmark.dir/all
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/depend
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=96,97 "Built target fastnum_bench"
+.PHONY : CMakeFiles/fastnum_bench.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/fastnum_bench.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 17
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fastnum_bench.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 0
+.PHONY : CMakeFiles/fastnum_bench.dir/rule
+
+# Convenience name for target.
+fastnum_bench: CMakeFiles/fastnum_bench.dir/rule
+
+.PHONY : fastnum_bench
+
+# clean rule for target.
+CMakeFiles/fastnum_bench.dir/clean:
+	$(MAKE) -f CMakeFiles/fastnum_bench.dir/build.make CMakeFiles/fastnum_bench.dir/clean
+.PHONY : CMakeFiles/fastnum_bench.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/NightlyCoverage.dir
 
 # All Build rule for target.
@@ -685,12 +755,12 @@ CMakeFiles/fastnum_tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMa
 CMakeFiles/fastnum_tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/depend
 	$(MAKE) -f CMakeFiles/fastnum_tests.dir/build.make CMakeFiles/fastnum_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=97,98,99,100 "Built target fastnum_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=98,99,100 "Built target fastnum_tests"
 .PHONY : CMakeFiles/fastnum_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fastnum_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 98
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 80
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fastnum_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 0
 .PHONY : CMakeFiles/fastnum_tests.dir/rule
@@ -955,12 +1025,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/depend
 	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=94 "Built target Catch2WithMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=77 "Built target Catch2WithMain"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 94
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 77
 	$(MAKE) -f CMakeFiles/Makefile2 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 0
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule
@@ -982,12 +1052,12 @@ _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/clean:
 _deps/catch2-build/src/CMakeFiles/Catch2.dir/all:
 	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/depend
 	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93 "Built target Catch2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target Catch2"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/catch2-build/src/CMakeFiles/Catch2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 93
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 76
 	$(MAKE) -f CMakeFiles/Makefile2 _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 0
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2.dir/rule
@@ -1001,6 +1071,60 @@ Catch2: _deps/catch2-build/src/CMakeFiles/Catch2.dir/rule
 _deps/catch2-build/src/CMakeFiles/Catch2.dir/clean:
 	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/clean
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir
+
+# All Build rule for target.
+_deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/all: _deps/benchmark-build/src/CMakeFiles/benchmark.dir/all
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/depend
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=93 "Built target benchmark_main"
+.PHONY : _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 16
+	$(MAKE) -f CMakeFiles/Makefile2 _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 0
+.PHONY : _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/rule
+
+# Convenience name for target.
+benchmark_main: _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/rule
+
+.PHONY : benchmark_main
+
+# clean rule for target.
+_deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/clean:
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/clean
+.PHONY : _deps/benchmark-build/src/CMakeFiles/benchmark_main.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/benchmark-build/src/CMakeFiles/benchmark.dir
+
+# All Build rule for target.
+_deps/benchmark-build/src/CMakeFiles/benchmark.dir/all:
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark.dir/depend
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles --progress-num=78,79,80,81,82,83,84,85,86,87,88,89,90,91,92 "Built target benchmark"
+.PHONY : _deps/benchmark-build/src/CMakeFiles/benchmark.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/benchmark-build/src/CMakeFiles/benchmark.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 _deps/benchmark-build/src/CMakeFiles/benchmark.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles 0
+.PHONY : _deps/benchmark-build/src/CMakeFiles/benchmark.dir/rule
+
+# Convenience name for target.
+benchmark: _deps/benchmark-build/src/CMakeFiles/benchmark.dir/rule
+
+.PHONY : benchmark
+
+# clean rule for target.
+_deps/benchmark-build/src/CMakeFiles/benchmark.dir/clean:
+	$(MAKE) -f _deps/benchmark-build/src/CMakeFiles/benchmark.dir/build.make _deps/benchmark-build/src/CMakeFiles/benchmark.dir/clean
+.PHONY : _deps/benchmark-build/src/CMakeFiles/benchmark.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
