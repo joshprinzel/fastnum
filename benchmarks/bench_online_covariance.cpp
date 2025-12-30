@@ -13,7 +13,7 @@ static void BM_observe_steady_state(benchmark::State& state){
     for(auto _ : state){
         cov.observe(1.0, 2.0);
         //Make sure the compiler does not cheat
-        benchmark::DoNotOptimize(cov.covariance_population());        
+        benchmark::DoNotOptimize(cov);        
     }
 
     //Shows how many items processed
@@ -31,11 +31,16 @@ static void BM_observe_array_streaming(benchmark::State& state){
   for (std::size_t i = 0; i < N; ++i) { xs[i] = dist(rng); ys[i] = dist(rng); }
 
   fastnum::OnlineCovariance<double> cov;
-  for (int i = 0; i < 1000; ++i) cov.observe(1.0, 2.0); // warm steady state
+  
 
   for (auto _ : state){
+    state.PauseTiming();
+    cov.reset();
+    for (int i = 0; i < 1000; ++i) cov.observe(1.0, 2.0); // warm steady state
+
+    state.ResumeTiming();
     cov.observe(xs.data(), ys.data(), N);
-    benchmark::DoNotOptimize(cov.covariance_population());
+    benchmark::DoNotOptimize(cov);
   }
 
   state.SetItemsProcessed(state.iterations() * N);
@@ -47,4 +52,39 @@ static void BM_observe_array_streaming(benchmark::State& state){
 
 
 BENCHMARK(BM_observe_array_streaming)->Arg(1<<10)->Arg(1<<16)->Arg(1<<20)->UseRealTime();
+
+
+//Testing array streaming vs. K Accumulator 
+static void BM_observe_array_K_accum(benchmark::State& state){
+  const std::size_t N = static_cast<std::size_t>(state.range(0));
+
+  std::vector<double> xs(N), ys(N);
+  std::mt19937_64 rng(12345);
+  std::uniform_real_distribution<double> dist(1.0, 1000.0);
+  for (std::size_t i = 0; i < N; ++i) { xs[i] = dist(rng); ys[i] = dist(rng); }
+
+  fastnum::OnlineCovariance<double> cov;
+  
+
+  for (auto _ : state){
+    state.PauseTiming();
+    cov.reset();
+    for (int i = 0; i < 1000; ++i) cov.observe(1.0, 2.0); // warm steady state
+
+    state.ResumeTiming();
+    cov.observe_accum(xs.data(), ys.data(), N);
+    benchmark::DoNotOptimize(cov);
+  }
+
+  state.SetItemsProcessed(state.iterations() * N);
+
+  const double bytes = double(N) * 2.0 * sizeof(double);
+  state.counters["Input_GiB/s"] = benchmark::Counter(
+      bytes, benchmark::Counter::kIsRate, benchmark::Counter::OneK::kIs1024);
+}
+
+
+BENCHMARK(BM_observe_array_K_accum)->Arg(1<<10)->Arg(1<<16)->Arg(1<<20)->MinTime(0.5);
+
+
 BENCHMARK_MAIN();

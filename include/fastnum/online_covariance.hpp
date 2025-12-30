@@ -51,6 +51,28 @@ public:
         observe(xs.data(), ys.data(), static_cast<std::size_t>(xs.size()));
     }
 
+    //Testing Optimization of K Accumulator to break dependency chain for Welford
+    // Benefits: Lower dependency which should increase latency and throughput
+    // Tradeoff: Slight FLOP discontinuity (ie floating points might be a litte off)
+
+
+    
+    constexpr void observe_accum(const T* xs, const T* ys, std::size_t n) noexcept{
+        
+
+        if(!xs || !ys || n == 0) return;
+        std::size_t K = 4;
+        OnlineCovariance<T> acc[K]{};
+
+        for (std::size_t i = 0; i < n; ++i){
+            acc[i % K].observe(xs[i], ys[i]); // K must be a power of two
+        }
+
+        for(std::size_t k = 0; k < K; ++k){
+            this->merge(acc[k]);
+        }
+    }
+
     // --- Basic accessors -----------------------------------------------------
 
     [[nodiscard]] constexpr std::size_t count() const noexcept { return n_; }
@@ -128,7 +150,7 @@ public:
         return covariance_population() / denom;
     }
 
-
+    // Optimization 4 expensive divide assembly instructions -> 1 divide assembly instruction
     constexpr void merge(const OnlineCovariance& other) noexcept{
         if(other.n_ == 0) return;
         if(n_ == 0){
@@ -140,32 +162,25 @@ public:
         const std::size_t n_b = other.n_;
         const std::size_t n = n_a + n_b;
 
-        const T mean_x_a = mean_x_;
-        const T mean_y_a = mean_y_;
+        const T na = static_cast<T>(n_a);
+        const T nb = static_cast<T>(n_b);
+        const T nt = static_cast<T>(n);
 
-        const T mean_x_b = other.mean_x_;
-        const T mean_y_b = other.mean_y_;
+        const T dx = other.mean_x_ - mean_x_;
+        const T dy = other.mean_y_ - mean_y_;
 
-        const T dx = mean_x_b - mean_x_a;
-        const T dy = mean_y_b - mean_y_a;
+        const T r = nb/nt; // 1 divide
+        const T t = na * r; // na*nb/nt
 
-        const T n_a_t = static_cast<T>(n_a);
-        const T n_b_t = static_cast<T>(n_b);
-        const T n_t = static_cast<T>(n);
+        mean_x_ += dx * r;
+        mean_y_ += dy * r;
 
-        //Update means
-        mean_x_ = mean_x_a + dx * (n_b_t / n_t);
-        mean_y_ = mean_y_a + dy * (n_b_t / n_t);
-
-
-        //Combine second central moments (Welford Merge)
-        m2_x_ = m2_x_ + other.m2_x_ + dx * dx * (n_a_t * n_b_t / n_t);
-        m2_y_ = m2_y_ + other.m2_y_ + dy * dy * (n_a_t * n_b_t / n_t);
-
-        //Combine cross_deviation sum
-        c_ = c_ + other.c_ + dx * dy * (n_a_t * n_b_t / n_t);
+        m2_x_ += other.m2_x_ + dx * dx * t;
+        m2_y_ += other.m2_y_ + dy * dy * t;
+        c_ += other.c_ + dx * dy * t;
 
         n_ = n;
+
     }
 
 private:
@@ -175,7 +190,7 @@ private:
     T m2_x_{0};
     T m2_y_{0};
     T c_{0};
-    T eps_{static_cast<T>(1e-12)};
+    static constexpr T eps_{static_cast<T>(1e-12)};
 };
 
 } // namespace fastnum
