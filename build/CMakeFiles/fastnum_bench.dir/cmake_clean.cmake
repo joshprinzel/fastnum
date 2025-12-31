@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o"
+  "CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o.d"
   "CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o"
+  "CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o.d"
   "fastnum_bench"
   "fastnum_bench.pdb"
 )

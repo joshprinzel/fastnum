@@ -72,7 +72,7 @@ static void BM_observe_array_K_accum(benchmark::State& state){
     for (int i = 0; i < 1000; ++i) cov.observe(1.0, 2.0); // warm steady state
 
     state.ResumeTiming();
-    cov.observe_accum<4>(xs.data(), ys.data(), N);
+    cov.observe_fast<4>(xs.data(), ys.data(), N);
     benchmark::DoNotOptimize(cov);
   }
 

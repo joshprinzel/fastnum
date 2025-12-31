@@ -5,7 +5,7 @@ if(NOT "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/ben
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E remove_directory "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/benchmark-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps/benchmark-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
@@ -17,7 +17,7 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "/usr/bin/git"  clone --no-checkout "https://github.com/google/benchmark.git" "benchmark-src"
+    COMMAND "/usr/bin/git"  clone --no-checkout --config "advice.detachedHead=false" "https://github.com/google/benchmark.git" "benchmark-src"
     WORKING_DIRECTORY "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/_deps"
     RESULT_VARIABLE error_code
     )

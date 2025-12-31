@@ -1,20 +1,16 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_covariance.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o"
-  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_standard_scaler.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o"
-  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_running_stats.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
-  "_deps/catch2-src/src/catch2/.."
-  "_deps/catch2-build/generated-includes"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_covariance.cpp" "CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o" "gcc" "CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o.d"
+  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_online_standard_scaler.cpp" "CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o" "gcc" "CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o.d"
+  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/tests/test_running_stats.cpp" "CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o" "gcc" "CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o.d"
   )
 
 # Targets to which this target links.

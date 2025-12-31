@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o  -o fastnum_bench  _deps/benchmark-build/src/libbenchmark.a -pthread -lrt 
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o -o fastnum_bench  _deps/benchmark-build/src/libbenchmark.a -pthread -lrt 

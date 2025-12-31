@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o"
+  "CMakeFiles/fastnum_tests.dir/tests/test_online_covariance.cpp.o.d"
   "CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o"
+  "CMakeFiles/fastnum_tests.dir/tests/test_online_standard_scaler.cpp.o.d"
   "CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o"
+  "CMakeFiles/fastnum_tests.dir/tests/test_running_stats.cpp.o.d"
   "fastnum_tests"
   "fastnum_tests-b12d07c_tests.cmake"
   "fastnum_tests.pdb"

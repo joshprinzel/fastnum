@@ -1,23 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/benchmarks/bench_online_covariance.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o"
-  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/benchmarks/bench_smoke.cpp" "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/build/CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "BENCHMARK_STATIC_DEFINE"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
-  "_deps/benchmark-src/include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/benchmarks/bench_online_covariance.cpp" "CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o" "gcc" "CMakeFiles/fastnum_bench.dir/benchmarks/bench_online_covariance.cpp.o.d"
+  "/mnt/c/Users/joshp_ya/VSCodeProjects/Personal/fast_stats/benchmarks/bench_smoke.cpp" "CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o" "gcc" "CMakeFiles/fastnum_bench.dir/benchmarks/bench_smoke.cpp.o.d"
   )
 
 # Targets to which this target links.
