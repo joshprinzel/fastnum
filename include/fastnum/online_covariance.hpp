@@ -56,16 +56,15 @@ public:
     // Tradeoff: Slight FLOP discontinuity (ie floating points might be a litte off)
 
 
-    
-    constexpr void observe_accum(const T* xs, const T* ys, std::size_t n) noexcept{
+    template<std::size_t K>
+    constexpr void observe_fast(const T* xs, const T* ys, std::size_t n) noexcept{
         
 
         if(!xs || !ys || n == 0) return;
-        std::size_t K = 4;
         OnlineCovariance<T> acc[K]{};
 
         for (std::size_t i = 0; i < n; ++i){
-            acc[i % K].observe(xs[i], ys[i]); // K must be a power of two
+            acc[i & (K-1)].observe(xs[i], ys[i]); // K must be a power of two
         }
 
         for(std::size_t k = 0; k < K; ++k){
