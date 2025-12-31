@@ -52,6 +52,73 @@ All algorithms operate in **O(1) memory** and **O(1) time per observation**.
 
 ---
 
+## Performance characteristics & design rationale
+
+`fastnum` is designed for **high-throughput streaming workloads** where each observation must be processed immediately, with **strict numerical correctness** and **constant memory usage**.
+
+### Performance model
+
+All core algorithms are based on **Welford-style online updates**, which have the following properties:
+
+- One update per element
+- Strong loop-carried dependencies (means and second moments)
+- Exact numerical behavior (no fast-math or reordering assumptions)
+
+As a result, performance is primarily governed by **instruction latency and dependency chains**, not memory bandwidth.
+
+Microbenchmarking shows that:
+
+- Throughput is flat across input sizes
+- Effective input bandwidth is far below DRAM limits
+- Performance is dominated by per-element arithmetic, not memory access
+
+This places the core kernels firmly in the **compute / latency-bound** regime.
+
+### Optimization strategy
+
+Because the algorithms are not memory-bound, typical optimizations such as:
+
+- cache blocking,
+- prefetching,
+- memory layout changes,
+- NUMA tuning,
+
+do **not** materially improve performance.
+
+Instead, the only effective optimizations are those that **reduce dependency depth** or **expose instruction-level parallelism (ILP)**.
+
+### Dependency-breaking via multi-accumulator blocking
+
+For array streaming use cases, `OnlineCovariance` employs a **K-accumulator strategy**:
+
+- The input stream is partitioned across multiple independent accumulators
+- Each accumulator processes a subset of the data
+- Partial results are merged at the end using exact Welford merge formulas
+
+This breaks long dependency chains while preserving numerical correctness.
+
+In practice, this yields a **~15–20% throughput improvement** on modern CPUs, after which register pressure and divider throughput dominate. Increasing `K` beyond a small value provides diminishing returns.
+
+### Intentional stopping point
+
+Further micro-optimizations were evaluated and rejected due to limited benefit or increased complexity:
+
+- Manual loop unrolling
+- Larger accumulator counts
+- Cache-focused tuning
+
+At this point, the kernels are close to the hardware’s throughput limits for this instruction mix.
+
+For v1.0, `fastnum` intentionally prioritizes:
+
+- clarity,
+- correctness,
+- reproducibility,
+
+over marginal gains that would require relaxed numerical guarantees.
+
+---
+
 ## NaN and readiness policy
 
 - Undefined quantities (e.g. variance with insufficient samples) return `NaN`

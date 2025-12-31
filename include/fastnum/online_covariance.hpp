@@ -58,6 +58,8 @@ public:
 
     template<std::size_t K>
     constexpr void observe_fast(const T* xs, const T* ys, std::size_t n) noexcept{
+        static_assert(K > 0 && (K & (K-1)) == 0, "K must be a power of two");
+        static_assert(K > 10, "K too big. Stack Overflow Risk").
         
 
         if(!xs || !ys || n == 0) return;
