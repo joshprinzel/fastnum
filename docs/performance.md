@@ -82,7 +82,7 @@ Lower-bound bandwidth Calc:
 
 ## 5. Conceptual Insight: "Pseudo Arithmetic Identity"
 
-Although we did not compute formal roofline arithmetic intensity (FLOPs / DRAM bytes), the lower-bound bandwidth metric serves as a proxy:
+Although I did not compute formal roofline arithmetic intensity (FLOPs / DRAM bytes), the lower-bound bandwidth metric serves as a proxy:
 
 - If effective bandwidth $\approx$ hardware bandwidth -> memory-bound
 - If effective bandwidth < hardware bandwidth -> compute or dependency-bound
@@ -114,7 +114,7 @@ Conclusion:
 - The kernel is latency-bound on a long dependency chain, dominated by scalar division.
 
 
-## 7. What We Learned (Negative Results Also Matter)
+## 7. What I Learned (Negative Results Also Matter)
 
 ### Optimizations that are not worth pursuing:
 - Cache blocking
@@ -169,6 +169,8 @@ A K-accumulator variant of the array streaming path was implemented:
 | 1k  | ~340 M elem/s       | ~395-400 M/s     | ~15-18% |
 | 64k | ~360 M elem/s       | ~425 M/s         | ~18%    |
 | 1M  | ~345 M elem/s       | ~405 M/s         | ~17-20% |
+
+
 Results were stable across runs ($CV \approx 2\%$).
 
 ### Interpretation
@@ -191,7 +193,7 @@ This indicates the optimized kernel is close to the core's throughput limits for
 - K-accumulator blocking is effective up to a small K; beyond that, register pressure dominates
 
 Most importantly:
-- We now know why the kernel is slow before trying to make it faster
+- I now know why the kernel is slow before trying to make it faster
 
 ## Next Steps 
 
