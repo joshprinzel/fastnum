@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 project(fastnum VERSION 0.1.0 LANGUAGES CXX)
 
-option(FASTNUM_BUILD_TESTS "Build fastnum tests" ON)
-option(FASTNUM_BUILD_EXAMPLES "Build fastnum examples" ON)
-option(FASTNUM_BUILD_BENCHMARKS "Build fastnum benchmarks" ON)
+# When fastnum built by itself -> ON
+# When fastnum is included in another project -> OFF
+option(FASTNUM_BUILD_TESTS "Build fastnum tests" ${PROJECT_IS_TOP_LEVEL})
+option(FASTNUM_BUILD_EXAMPLES "Build fastnum examples" ${PROJECT_IS_TOP_LEVEL})
+option(FASTNUM_BUILD_BENCHMARKS "Build fastnum benchmarks" ${PROJECT_IS_TOP_LEVEL})
 
 # Default to Release for single-config generators
 if (PROJECT_IS_TOP_LEVEL AND NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
